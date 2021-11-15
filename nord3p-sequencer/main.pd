@@ -1,0 +1,5 @@
+#N canvas 143 91 969 415 12;
+#X obj 15 101 channels;
+#X obj 15 28 transport;
+#X text 428 17 Euclidean Beats;
+#X connect 1 0 0 0;

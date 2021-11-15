@@ -1,0 +1,92 @@
+#N canvas 303 88 912 643 12;
+#X obj 220 563 noteout;
+#X obj 220 520 makenote;
+#X obj 220 494 f;
+#X obj 221 22 inlet;
+#X floatatom 298 433 0 0 0 3 pitch - -;
+#X floatatom 331 433 0 0 0 3 vel - -;
+#X floatatom 363 433 0 0 0 3 length - -;
+#X floatatom 518 403 5 0 0 0 channel - -;
+#X obj 220 343 euclid;
+#X floatatom 300 189 5 0 0 0 hits - -;
+#X floatatom 299 248 5 0 0 0 rotation - -;
+#X floatatom 299 304 5 0 0 0 length - -;
+#X obj 518 248 loadbang;
+#X obj 518 278 i \$1;
+#X text 300 83 hits;
+#X text 396 80 rotation;
+#X text 490 81 length;
+#X text 597 81 pitch;
+#X text 680 84 velocity;
+#X text 781 80 note_length;
+#X text 88 412 hit_indicator;
+#X obj 300 57 s \$0-cc-s-1;
+#X obj 394 56 s \$0-cc-s-2;
+#X obj 488 56 s \$0-cc-s-3;
+#X obj 584 58 s \$0-cc-s-4;
+#X obj 680 59 s \$0-cc-s-5;
+#X obj 776 57 s \$0-cc-s-6;
+#X obj 301 161 r \$0-cc-s-1;
+#X obj 299 221 r \$0-cc-s-2;
+#X obj 300 277 r \$0-cc-s-3;
+#X obj 298 351 r \$0-cc-s-4;
+#X obj 331 378 r \$0-cc-s-5;
+#X obj 363 403 r \$0-cc-s-6;
+#X obj 91 389 s \$0-cc-s-7;
+#X text 229 46 counter;
+#X obj 300 22 inlet;
+#X obj 394 21 inlet;
+#X obj 488 19 inlet;
+#X obj 584 19 inlet;
+#X obj 680 19 inlet;
+#X obj 776 19 inlet;
+#X obj 20 20 cnv 15 140 270 empty empty channel_\$1 20 12 0 14 -228856
+-66577 0;
+#X obj 26 60 hsl 128 15 0 127 0 0 \$0-cc-s-1 \$0-cc-s-1 hits -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 26 98 hsl 128 15 0 127 0 0 \$0-cc-s-2 \$0-cc-s-2 rotation -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 26 136 hsl 128 15 0 127 0 0 \$0-cc-s-3 \$0-cc-s-3 length -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 23 157 bng 15 250 50 0 \$0-cc-r-7 \$0-cc-s-7 empty 17 7 0 10
+-262144 -1 -1;
+#X obj 26 191 hsl 128 15 0 127 0 0 \$0-cc-s-4 \$0-cc-s-4 pitch -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 26 232 hsl 128 15 0 127 0 0 \$0-cc-s-5 \$0-cc-s-5 velocity -2
+-8 0 10 -262144 -1 -1 0 1;
+#X obj 26 271 hsl 128 15 0 127 0 0 \$0-cc-s-6 \$0-cc-s-6 note_length
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X floatatom 119 40 5 0 0 0 - #0-cc-s-1 -;
+#X floatatom 119 78 5 0 0 0 - #0-cc-s-2 -;
+#X floatatom 119 116 5 0 0 0 - #0-cc-s-3 -;
+#X floatatom 119 171 5 0 0 0 - #0-cc-s-4 -;
+#X floatatom 119 212 5 0 0 0 - #0-cc-s-5 -;
+#X floatatom 118 251 5 0 0 0 - #0-cc-s-6 -;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 8 0;
+#X connect 4 0 2 1;
+#X connect 5 0 1 1;
+#X connect 6 0 1 2;
+#X connect 7 0 0 2;
+#X connect 8 0 2 0;
+#X connect 8 0 33 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 2;
+#X connect 11 0 8 3;
+#X connect 12 0 13 0;
+#X connect 13 0 7 0;
+#X connect 27 0 9 0;
+#X connect 28 0 10 0;
+#X connect 29 0 11 0;
+#X connect 30 0 4 0;
+#X connect 31 0 5 0;
+#X connect 32 0 6 0;
+#X connect 35 0 21 0;
+#X connect 36 0 22 0;
+#X connect 37 0 23 0;
+#X connect 38 0 24 0;
+#X connect 39 0 25 0;
+#X connect 40 0 26 0;
+#X coords 0 -1 1 1 140 270 1 20 20;
