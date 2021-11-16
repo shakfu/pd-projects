@@ -40,7 +40,7 @@
 #X obj 584 19 inlet;
 #X obj 680 19 inlet;
 #X obj 776 19 inlet;
-#X obj 20 20 cnv 15 140 270 empty empty channel_\$1 20 12 0 14 -228856
+#X obj 20 20 cnv 15 140 270 empty empty channel_\$1 20 12 0 11 -204800
 -66577 0;
 #X obj 26 60 hsl 128 15 0 127 0 0 \$0-cc-s-1 \$0-cc-s-1 hits -2 -8
 0 10 -262144 -1 -1 0 1;
