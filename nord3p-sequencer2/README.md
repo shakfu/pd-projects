@@ -5,10 +5,11 @@ implementation by [stutter](https://forum.pdpatchrepo.info/topic/5968/euclidean-
 
 Includes a touchosc template.
 
+This version add a separate clock per channel.
 
 ## TODO
 
 - [x] add midi (touchosc) controls for euclid and midi params
-- [ ] add different clock derivations for each channel
+- [x] add different clock derivations for each channel
 - [ ] add modulation
 
