@@ -7,7 +7,7 @@ Minimal euclidean drum sequencer for Roland TR-6S using vanilla puredata!
 
 ## TODO
 
-- [ ] Levels is not working !
+- implement non-track cc controls 
 
 
 ## MIDI Map
@@ -110,8 +110,6 @@ OH 		58		46
 CC PARAM
 -- -----
 9 SHUFFLE
-12 EXTERNAL IN LEVEL
-14 AUTO FILL IN [ON]
 15 MASTER FX [ON]
 16 DELAY LEVEL
 17 DELAY TIME
@@ -143,50 +141,39 @@ CC PARAM
 63 CH LEVEL
 107 CH CTRL
 
-70 AUTO FILL IN [MANUAL TRIG] ACCENT
-71 ACCENT
-
 80 OH TUNE
 81 OH DECAY
 82 OH LEVEL
 108 OH CTRL
 
+70 FILL IN TRIG
+71 ACCENT
 91 REVERB LEVEL
 ```
 
 ## Track Parameter
 
 ```
-track <name> <n1> <n2> <cc-tune> <cc-decay> <cc-level> <cc-ctrl>
+
+track <name> <chan> <n1> <n2> \
+	  <tune> <decay> <level> <ctrl> \ # cc out
+	  <hit> <len> <rot> <snd> <tun> <vel> <dur> <dcy> <ctl> <lvl> \ # cc in
 
 for example
 
-track BD 35 36 20 23 24 96
+track BD 10 35 36 20 23 24 96  0   1   2   3   4   5   6   7   8   9
 
-track $1 $2 $3 $4 $5 $6 $7
+track $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17 $18
 
 
 So for all the tracks
 
-track BD 35 36 20 23 24 96
-track SD 40 38 25 28 29 97
-track LT 41 43 46 47 48 102
-track HC 54 39 58 59 60 106
-track CH 44 42 61 62 63 107
-track OH 58 46 80 81 82 108
+track BD 10 35 36 20 23 24 96  0   1  2  3  4  5  6  7  8  9
+track SD 10 40 38 25 28 29 97  10 11 12 13 14 15 16 17 18 19
+track LT 10 41 43 46 47 48 102 20 21 22 23 24 25 26 27 28 29
+track HC 10 54 39 58 59 60 106 30 31 32 33 34 35 36 37 18 39
+track CH 10 44 42 61 62 63 107 40 41 42 43 44 45 46 47 48 49
+track OH 10 58 46 80 81 82 108 50 51 52 53 54 55 56 57 58 59
 
 ```
-
-
-## Problems
-
-### `ctlin` does not accept $-substitution!
-
-Which creates an unholy mess in `tracks.pd`
-
-Seems this issue is widespread:
-
-- see: https://lists.puredata.info/pipermail/pd-list/2009-03/068698.html
-	- possible solutions: https://lists.puredata.info/pipermail/pd-list/2009-03/068702.html
-
 
