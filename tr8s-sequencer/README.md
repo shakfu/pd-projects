@@ -154,22 +154,6 @@ CH 		44		42
 OH 		58		46
 CC 		61		49
 RC 		63		51
-
-BD		35, 36
-RS 		37, 56
-SD 		38, 40
-HC 		39, 54
-LT 		41, 43
-CH 		42, 44
-MT		45, 47
-OH 		46, 55
-HT 		48, 50
-CC		49, 57
-RC 		51, 59
-
-
-
-
 ```
 
 ### Control Change (CC)
@@ -250,41 +234,37 @@ CC PARAM
 ## Track Parameter
 
 ```
-track <name> <n1> <n2> <cc-tune> <cc-decay> <cc-level> <cc-ctrl>
+track <name> <chan> <n1> <n2> \
+	  <tune> <decay> <level> <ctrl> \ # cc out
+	  <hit> <len> <rot> <snd> <tun> <vel> <dur> <dcy> <ctl> <lvl> \ # cc in
 
 for example
 
-track BD 35 36 20 23 24 96
+track BD 10 35 36 20 23 24 96  0   1   2   3   4   5   6   7   8   9
 
-track $1 $2 $3 $4 $5 $6 $7
+track $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14 $15 $16 $17 $18
 
 
 So for all the tracks
 
-track BD 35 36 20 23 24 96
-track SD 40 38 25 28 29 97
-track LT 41 43 46 47 48 102
-track MT 45 47 49 50 51 103
-track HT 48 50 52 53 54 104
-track RS 56 37 55 56 57 105
-track HC 54 39 58 59 60 106
-track CH 44 42 61 62 63 107
-track OH 58 46 80 81 82 108
-track CC 61 49 83 84 85 109
-track RC 63 51 86 87 88 110
+track BD 10 35 36 20 23 24 96  0   1  2  3  4  5  6  7  8  9
+track SD 10 40 38 25 28 29 97  10 11 12 13 14 15 16 17 18 19
+track LT 10 41 43 46 47 48 102 20 21 22 23 24 25 26 27 28 29
+track MT 10 45 47 49 50 51 103 30 31 32 33 34 35 36 37 18 39
+track HT 10 48 50 52 53 54 104 40 41 42 43 44 45 46 47 48 49
+track RS 10 56 37 55 56 57 105 50 51 52 53 54 55 56 57 58 59
+track HC 10 54 39 58 59 60 106 60 61 62 63 64 65 66 67 68 69
+track CH 10 44 42 61 62 63 107 70 71 72 73 74 75 76 77 78 79
+track OH 10 58 46 80 81 82 108 80 81 82 83 84 85 86 87 88 89
+track CC 10 61 49 83 84 85 109 90 91 92 93 94 95 96 97 98 99
+track RC 10 63 51 86 87 88 110 100 101 102 103 104 105 106 107 108 109
+
+
 
 ```
 
 
 ## Problems
 
-### `ctlin` does not accept $-substitution!
-
-Which creates an unholy mess in `tracks.pd`
-
-Seems this issue is widespread:
-
-- see: https://lists.puredata.info/pipermail/pd-list/2009-03/068698.html
-	- possible solutions: https://lists.puredata.info/pipermail/pd-list/2009-03/068702.html
 
 
