@@ -1,0 +1,42 @@
+#N canvas 34 329 621 388 12;
+#X obj 100 90 cnv 15 240 60 empty empty transport 20 12 0 11 -204786
+-66577 0;
+#X obj 194 28 loadbang;
+#X obj 107 198 metro;
+#X floatatom 194 120 0 0 0 1 - - -;
+#X msg 194 60 500;
+#X obj 107 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 319 97 bng 15 250 50 0 empty bpm empty 17 7 0 10 -262144 -1
+-1;
+#X obj 107 271 int 1;
+#X obj 166 271 + 1;
+#X msg 123 233 1;
+#X obj 275 10 ctlin 36;
+#X obj 275 61 i;
+#X obj 107 28 ctlin 40;
+#X obj 107 322 outlet;
+#X text 293 124 reset;
+#X obj 273 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 222 123 rate;
+#X text 126 122 start;
+#X obj 53 232 s bpm;
+#X obj 275 36 expr pow(500 \, ($f1 - 0.) / 127.);
+#X text 309 61 midi log scaling func (max=500);
+#X connect 1 0 4 0;
+#X connect 2 0 7 0;
+#X connect 2 0 18 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 7 0 8 0;
+#X connect 7 0 13 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 10 0 19 0;
+#X connect 11 0 3 0;
+#X connect 12 0 5 0;
+#X connect 15 0 9 0;
+#X connect 19 0 11 0;
+#X coords 0 -1 1 1 240 60 1 100 90;

@@ -1,0 +1,6 @@
+#N canvas 254 226 1042 412 12;
+#X obj 15 28 transport;
+#X obj 537 8 cnv 15 240 30 empty empty DRM1mk3_Euclidean_Seq 20 12
+0 16 -262130 -66577 0;
+#X obj 15 101 tracks;
+#X connect 0 0 2 0;
