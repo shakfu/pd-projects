@@ -1,0 +1,6 @@
+#N canvas 249 143 644 394 12;
+#X obj 15 28 transport;
+#X obj 265 6 cnv 15 240 30 empty empty drum1-seq 20 12 0 16 -262130
+-66577 0;
+#X obj 15 117 tracks;
+#X connect 0 0 2 0;

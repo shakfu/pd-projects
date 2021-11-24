@@ -1,0 +1,10 @@
+#N canvas 229 50 935 354 12;
+#X obj 20 21 cnv 15 900 310 empty empty tracks 20 12 0 12 -228856 -66577
+0;
+#X obj 27 48 track 1 0 1 2 3 4 5;
+#X obj 177 50 track 2 6 7 8 9 10 11;
+#X obj 326 45 track 3 12 13 14 15 16 17;
+#X obj 474 44 track 4 18 19 20 21 22 23;
+#X obj 621 45 track 5 24 25 26 27 28 29;
+#X obj 768 46 track 6 30 31 32 33 34 35;
+#X coords 0 -1 1 1 900 310 1 20 21;

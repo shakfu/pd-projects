@@ -1,5 +1,0 @@
-#N canvas 90 237 1267 422 12;
-#X obj 15 101 channels;
-#X obj 15 28 transport;
-#X obj 524 8 cnv 15 240 30 empty empty Nord3p_Euclidean_Seq 20 12 0
-16 -262130 -66577 0;
